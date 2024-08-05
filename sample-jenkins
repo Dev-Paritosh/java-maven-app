@@ -1,6 +1,6 @@
 pipeline{
   agent any
-  parameyers{
+  parameters{
     choice(name:'VERSION',choices : ['1.0','1.1',1.2], description : 'Version choice')
     booleanParam(name:'executeTest',defaultvalue:true,description : 'Execute Parameters' )
   }
