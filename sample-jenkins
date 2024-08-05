@@ -3,19 +3,19 @@ pipeline{
 
   stages{
   
-    satge("build"){
+    stage("build"){
       steps{
         echo "Building Application...."
       }
     }
     
-    satge("test"){
+    stage("test"){
       steps{
         echo "Testing Application...."
       }
     }
 
-    satge("Deploying Application"){
+    stage("Deploying Application"){
       steps{
         echo "Building Application...."
       }
