@@ -12,7 +12,7 @@ pipeline{
     stage("build"){
       steps{
         echo "Building Application...."
-        echo "Using ${maven --version}"
+        echo "Using ${mvn --version}"
       }
     }
     
