@@ -21,9 +21,9 @@ pipeline {
                 script {
                    echo "building the docker image..."
                    withCredentials([usernamePassword(credentialsId: 'docker-hub-id-pass', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                     sh 'docker build -t parit0sh/my-repo:${params.VERSION} .'
+                     sh 'docker build -t parit0sh/my-repo:2.0 .'
                      sh "echo $PASS | docker login -u $USER --password-stdin"
-                     sh 'docker push parit0sh/my-repo:${params.VERSION}'
+                     sh 'docker push parit0sh/my-repo:2.0'
                   }
                     
                 }
